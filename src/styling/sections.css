@@ -1,0 +1,127 @@
+.blog{
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.blog-image{
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blog-image img{
+    width: 100%;
+}
+
+.blog-texts{
+    position: absolute;
+    bottom: 0px;
+    padding: 10px 15px;
+}
+
+.blog-texts button{
+    background-color: rgb(233,69,68);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 7px 25px;
+}
+
+.questions-header{
+    width: 300px;
+}
+
+.accordion{
+    width: 800px;
+}
+
+.service{
+    height: 250px;
+    width: 300px;
+    padding: 50px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.service-header{
+    font-size: 20px;
+    color: rgb(233,69,68);
+}
+
+input{
+    height: 45px;
+    border-radius: 3px;
+    padding-left: 10px;
+    border: 1px solid rgb(201, 201, 201);
+}
+
+textarea{
+    border-radius: 3px;
+    padding-left: 10px;
+    border: 1px solid rgb(201, 201, 201);
+}
+
+.send-mail{
+    height: 45px;
+    border-radius: 7px;
+    width: 200px;
+    margin-top: 10px;
+    border: none;
+    background-color: rgb(233,69,68);
+    color: white;
+}
+
+.footer1{
+    width: 360px;
+}
+
+.footer-category{
+    width: 250px;
+}
+
+.footer-category p{
+    color: grey;
+}
+
+.link a{
+    color: grey;
+}
+
+.link{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facebook{
+    color: rgb(0, 115, 255);
+}
+
+.whatsapp{
+    color: rgb(0, 161, 0);
+}
+
+.linkedin{
+    color: rgb(0, 115, 255);
+}
+
+.link.facebook{
+    border: 1px solid rgb(0, 115, 255);
+}
+
+.link.linkedin{
+    border: 1px solid rgb(0, 115, 255);
+}
+
+.link.whatsapp{
+    border: 1px solid rgb(0, 161, 0);
+}

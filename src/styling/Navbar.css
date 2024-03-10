@@ -1,0 +1,24 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+p.brand{
+    font-weight: 700;
+    font-size: 25px;
+    color: rgb(233,69,68);
+    margin-bottom: 5px;
+}
+
+.nav-list{
+    display: flex;
+    gap: 40px;
+}

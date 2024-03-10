@@ -9,22 +9,22 @@ export default function Services(){
 
             <div className="d-flex flex-wrap justify-content-center gap-3 mt-5">
                 <div className="service">
-                    <p className="service-header fw-bold">Lorem Ipsum</p>
+                    <p className="service-header fw-bold">Service1</p>
                     <p className="text-secondary">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
                 </div>
 
                 <div className="service">
-                    <p className="service-header fw-bold">Lorem Ipsum</p>
+                    <p className="service-header fw-bold">Service2</p>
                     <p className="text-secondary">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
                 </div>
 
                 <div className="service">
-                    <p className="service-header fw-bold">Lorem Ipsum</p>
+                    <p className="service-header fw-bold">Service3</p>
                     <p className="text-secondary">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
                 </div>
 
                 <div className="service">
-                    <p className="service-header fw-bold">Lorem Ipsum</p>
+                    <p className="service-header fw-bold">Service4</p>
                     <p className="text-secondary">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
                 </div>
             </div>

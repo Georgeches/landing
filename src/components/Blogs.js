@@ -42,17 +42,6 @@ export default function Blogs(){
                         <button>More</button>
                     </div>
                 </div>
-
-                <div className="blog">
-                    <div className="blog-image">
-                        <img src="https://bootstrapmade.com/demo/templates/Append/assets/img/blog/blog-1.jpg" alt="blog"/>
-                    </div>
-                    <div className="blog-texts">
-                        <h5 className='text-secondary'>Topic</h5>
-                        <p className="blog-details">Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
-                        <button>More</button>
-                    </div>
-                </div>
             </div>
         </div>
     )

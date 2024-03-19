@@ -4,7 +4,7 @@ export default function Services(){
     return (
         <div className={sectionClass} style={{marginTop: "80px"}}>
             <div className="mt-5 services-body">
-                <div className="section-header col-12 col-lg-4">
+                <div className="section-header ps-2 ps-lg-5 col-12 col-lg-12">
                     <p style={{
                         fontSize: "20px",
                         margin: "0px"
@@ -26,6 +26,9 @@ export default function Services(){
                     <img src={images+'/bid_bond.jpg'} className="w-100" alt=""/>
                 </div>
                 <div className="service-with-img">
+                    <img src={images+'/perfomance.jpg'} className="w-100" alt=""/>
+                </div>
+                <div className="service-with-img">
                     <img src={images+'/letter_of_credit.jpg'} className="w-100" alt=""/>
                 </div>
                 <div className="service-with-img">
@@ -35,7 +38,7 @@ export default function Services(){
                     <img src={images+'/car.jpg'} className="w-100" alt=""/>
                 </div>
                 <div className="service-with-img">
-                    <img src={images+'/bid_bond2.jpg'} className="w-100" alt=""/>
+                    <img src={images+'/wiba.jpg'} className="w-100" alt=""/>
                 </div>
             </div>
         </div>

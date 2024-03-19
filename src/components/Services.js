@@ -13,31 +13,27 @@ export default function Services(){
                         fontSize: "40px"
                     }} className="fw-bold">We Offer</p>
                     <ul className="services-list mt-3">
-                        <li>Letter Of Credit</li>
                         <li>Bid Bond</li>
-                        <li>Contractor's All Risks Insurance (CAR)</li>
-                        <li>Advance Payment Guarantee</li>
                         <li>Perfomance Bonds</li>
+                        <li>Letter Of Credit</li>
+                        <li>Advance Payment Guarantee</li>
+                        <li>Contractor's All Risks Insurance (CAR)</li>
                         <li>Work Injury Benefits Act (WIBA) Insurance</li>
                     </ul>
                     <button className="btn mt-2 text-white" style={{background: "#b58800"}}>Get Quotations</button>
                 </div>
                 <div className="service-with-img">
-                    <img src={images+'/letter_of_credit.jpg'} className="w-100" alt=""/>
-                </div>
-
-                <div className="service-with-img">
                     <img src={images+'/bid_bond.jpg'} className="w-100" alt=""/>
                 </div>
-
                 <div className="service-with-img">
-                    <img src={images+'/car.jpg'} className="w-100" alt=""/>
+                    <img src={images+'/letter_of_credit.jpg'} className="w-100" alt=""/>
                 </div>
-
                 <div className="service-with-img">
                     <img src={images+'/apg.jpg'} className="w-100" alt=""/>
                 </div>
-
+                <div className="service-with-img">
+                    <img src={images+'/car.jpg'} className="w-100" alt=""/>
+                </div>
                 <div className="service-with-img">
                     <img src={images+'/bid_bond2.jpg'} className="w-100" alt=""/>
                 </div>

@@ -9,7 +9,7 @@ export default function Navbar(){
         {/* >=tablets */}
         <div className="navbar d-none d-md-flex">
             <div className="navbar-brand">
-                <img height="100" src={logo} alt='logo'/>
+                <a href='/'><img height="100" src={logo} alt='logo'/></a>
             </div>
 
             <div className="nav-items">
@@ -33,7 +33,7 @@ export default function Navbar(){
         {/* smaller than tablets */}
         <div className="navbar navbar-small d-md-none">
             <div className="navbar-brand">
-            <img height="100" src={logo} alt='logo'/>
+                <a href='/'><img height="100" src={logo} alt='logo'/></a>
             </div>
 
             <i className="las la-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style={{fontSize: "30px"}}></i>

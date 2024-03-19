@@ -1,13 +1,12 @@
 .blog{
-    height: 400px;
-    width: 330px;
+    height: fit-content;
     overflow: hidden;
     position: relative;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .blog-image{
-    height: 250px;
+    height: 70%;
     width: 100%;
     overflow: hidden;
 }
@@ -17,17 +16,14 @@
 }
 
 .blog-texts{
-    position: absolute;
-    bottom: 0px;
     padding: 10px 15px;
+    height: 25%; 
 }
 
-.blog-texts button{
-    background-color: rgb(233,69,68);
-    border: none;
-    border-radius: 5px;
+.blog-texts button:hover{
+    background-color: #A47A00;
     color: white;
-    padding: 7px 25px;
+    border: 1px solid #A47A00;
 }
 
 .questions-header{
@@ -39,18 +35,51 @@
 }
 
 .service{
-    height: 250px;
+    height: 270px;
     width: 300px;
-    padding: 50px 30px;
+    padding: 0px 0px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+.services-list li{
+    list-style-type: disc;
+}
+
+.services-body{
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.section-header{
+    width: 30%;
+}
+
+.service-with-img{
+    max-height: 450px;
+    width: 30%;
+    overflow: hidden;
+}
+
+.service-with-img img{
+    width: 100%;
+}
+
+.service-image{
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+
 .service-header{
     font-size: 20px;
-    color: rgb(233,69,68);
+    color: #A47A00;
+    margin-bottom: 10px;
 }
 
 input{
@@ -72,7 +101,7 @@ textarea{
     width: 200px;
     margin-top: 10px;
     border: none;
-    background-color: rgb(233,69,68);
+    background-color: #A47A00;
     color: white;
 }
 
@@ -86,6 +115,12 @@ textarea{
 
 .footer-category p{
     color: grey;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-category p:hover{
+    color: black;
 }
 
 .link a{
@@ -124,4 +159,42 @@ textarea{
 
 .link.whatsapp{
     border: 1px solid rgb(0, 161, 0);
+}
+
+@media only screen and (min-width: 1024px){
+    .blog{
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .services-section{
+        position: relative;
+        top: 60px;
+    }
+    .blogs-section{
+        position: relative;
+        top: 60px;  
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .service-with-img{
+        width: 48.5%;
+    }
+    .section-header{
+        width: 100%;
+    }
+    .blog{
+        width: 49%;
+    }
+}
+
+@media only screen and (max-width: 560px){
+    .service-with-img, .section-header{
+        width: 90%;
+    }
+    .blog{
+        width: 90%;
+    }
 }

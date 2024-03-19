@@ -1,9 +1,9 @@
 import '../styling/Hero.css'
 
 export default function Hero(){
-    const hero_image = process.env.PUBLIC_URL+'/images/pexels-fox-1595388.jpg'
+    const hero_image = process.env.PUBLIC_URL+'/images/hero.avif'
     return (
-        <div className="hero container-fluid p-0">
+        <div className="hero container-fluid p-0 d-flex justify-content-center flex-wrap">
             <img src={hero_image} className="w-100" alt="hero"/>
             <div className='hero-texts'>
                 <p className='hero-texts-header'>Welcome to Our Website</p>

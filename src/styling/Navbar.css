@@ -11,14 +11,11 @@
     background-color: white;
 }
 
-p.brand{
-    font-weight: 700;
-    font-size: 25px;
-    color: rgb(233,69,68);
-    margin-bottom: 5px;
-}
-
 .nav-list{
     display: flex;
     gap: 40px;
+}
+
+.nav-list li a:hover{
+    color: #b58800;
 }

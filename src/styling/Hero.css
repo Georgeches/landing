@@ -1,10 +1,15 @@
 .hero{
     position: relative;
+    top: 80px;
+}
+
+.hero img{
+    filter: brightness(70%);
 }
 
 .hero-texts{
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 15%;
 }
 
@@ -23,7 +28,7 @@
 .hero-texts-button{
     height: 50px;
     width: 200px;
-    background-color: rgb(233,69,68);
+    background-color: #A47A00;
     border: none;
     border-radius: 10px;
     color: white;
@@ -33,10 +38,11 @@
 @media only screen and (max-width: 768px) {
     .hero{
         overflow: hidden;
+        top: 50px;
     }
     .hero-texts{
         position: absolute;
-        top: 45%;
+        top: 42%;
         left: 4%;
     }
 
@@ -50,6 +56,17 @@
 
     .hero img{
         height: 450px;
+        width: auto !important;
+    }
+}
+
+@media only screen and (max-width: 560px){
+    .hero{
+        height: 100vh;
+    }
+
+    .hero img{
+        height: 100%;
         width: auto !important;
     }
 }

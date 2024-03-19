@@ -1,9 +1,9 @@
-export default function NavOffcanvas(){
+export default function NavOffcanvas({logo}){
 
     return(
         <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div className="offcanvas-header">
-                <p className="brand">Brand</p>
+            <img height="100" src={logo} alt='logo'/>
                 <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">

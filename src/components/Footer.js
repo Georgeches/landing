@@ -25,7 +25,7 @@ export default function Footer(){
                 </ul>
             </div>
 
-            <div className="d-flex flex-wrap align-items-cente">
+            <div className="d-flex flex-wrap gap-5">
                 <div className="footer-category">
                     <h5 className="mb-3">Useful links</h5>
                     <p>Home</p>
@@ -37,11 +37,12 @@ export default function Footer(){
 
                 <div className="footer-category">
                     <h5 className="mb-3">Our Services</h5>
-                    <p>Service1</p>
-                    <p>Service2</p>
-                    <p>Service3</p>
-                    <p>Service4</p>
-                    <p>Service5</p>
+                    <p>Bid Bond</p>
+                    <p>Perfomance Bonds</p>
+                    <p>Letter of Credit</p>
+                    <p>Advance Payment Guarantee</p>
+                    <p>Contractor's All Risks Insurance</p>
+                    <p>Work Injury Benefits Act Insurance</p>
                 </div>
 
                 <div className="footer-category">

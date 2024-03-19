@@ -1,31 +1,45 @@
 export default function Services(){
-
+    const images = `${process.env.PUBLIC_URL}/images`
+    const sectionClass = window.screen.width < 1024?"container-fluid px-5 services-section":"container-fluid services-section"
     return (
-        <div className="container mt-5">
-            <div className="text-center">
-                <h2 className="fw-bold">Services</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div>
-
-            <div className="d-flex flex-wrap justify-content-center gap-3 mt-5">
-                <div className="service">
-                    <p className="service-header fw-bold">Service1</p>
-                    <p className="text-secondary">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+        <div className={sectionClass} style={{marginTop: "80px"}}>
+            <div className="mt-5 services-body">
+                <div className="section-header col-12 col-lg-4">
+                    <p style={{
+                        fontSize: "20px",
+                        margin: "0px"
+                    }}>Services</p>
+                    <p style={{
+                        fontSize: "40px"
+                    }} className="fw-bold">We Offer</p>
+                    <ul className="services-list mt-3">
+                        <li>Letter Of Credit</li>
+                        <li>Bid Bond</li>
+                        <li>Contractor's All Risks Insurance (CAR)</li>
+                        <li>Advance Payment Guarantee</li>
+                        <li>Perfomance Bonds</li>
+                        <li>Work Injury Benefits Act (WIBA) Insurance</li>
+                    </ul>
+                    <button className="btn mt-2 text-white" style={{background: "#b58800"}}>Get Quotations</button>
+                </div>
+                <div className="service-with-img">
+                    <img src={images+'/letter_of_credit.jpg'} className="w-100" alt=""/>
                 </div>
 
-                <div className="service">
-                    <p className="service-header fw-bold">Service2</p>
-                    <p className="text-secondary">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                <div className="service-with-img">
+                    <img src={images+'/bid_bond.jpg'} className="w-100" alt=""/>
                 </div>
 
-                <div className="service">
-                    <p className="service-header fw-bold">Service3</p>
-                    <p className="text-secondary">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                <div className="service-with-img">
+                    <img src={images+'/car.jpg'} className="w-100" alt=""/>
                 </div>
 
-                <div className="service">
-                    <p className="service-header fw-bold">Service4</p>
-                    <p className="text-secondary">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                <div className="service-with-img">
+                    <img src={images+'/apg.jpg'} className="w-100" alt=""/>
+                </div>
+
+                <div className="service-with-img">
+                    <img src={images+'/bid_bond2.jpg'} className="w-100" alt=""/>
                 </div>
             </div>
         </div>

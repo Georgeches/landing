@@ -3,13 +3,13 @@ import NavOffcanvas from './NavOffcanvas'
 
 export default function Navbar(){
 
+    const logo = process.env.PUBLIC_URL+'/images/logo.png'
     return (
         <>
-
         {/* >=tablets */}
         <div className="navbar d-none d-md-flex">
             <div className="navbar-brand">
-                <p className="brand">Brand</p>
+                <img height="100" src={logo} alt='logo'/>
             </div>
 
             <div className="nav-items">
@@ -18,16 +18,13 @@ export default function Navbar(){
                         <a className='nav-link' href='/'>Home</a>
                     </li>
                     <li>
-                        <a href='/about' className='nav-link'>About</a>
+                        <a href='/#services-section' className='nav-link'>Services</a>
                     </li>
                     <li>
-                        <a href='/services' className='nav-link'>Services</a>
+                        <a href='#blogs-section' className='nav-link'>Blogs</a>
                     </li>
                     <li>
-                        <a href='/blogs' className='nav-link'>Blogs</a>
-                    </li>
-                    <li>
-                        <a href='/contact' className='nav-link'>Contact</a>
+                        <a href='/#footer-section' className='nav-link'>Contact</a>
                     </li>
                 </ul>
             </div>
@@ -36,11 +33,11 @@ export default function Navbar(){
         {/* smaller than tablets */}
         <div className="navbar navbar-small d-md-none">
             <div className="navbar-brand">
-                <p className="brand">Brand</p>
+            <img height="100" src={logo} alt='logo'/>
             </div>
 
             <i className="las la-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style={{fontSize: "30px"}}></i>
-            <NavOffcanvas />
+            <NavOffcanvas logo={logo}/>
         </div>
         </>
     )

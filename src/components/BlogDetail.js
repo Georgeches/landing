@@ -21,9 +21,9 @@ export default function BlogDetail({blogs}){
                         {blog?.body?.map(p=><Paragraph paragraph={p}/>)}
                     </div>
                 </div>
-                <div className="w-25 other-section">
+                <div className="px-3 px-md-0 w-25 other-section">
                     <h3>More blogs</h3>
-                    <div className="d-flex flex-column mt-3">
+                    <div className="d-flex flex-wrap justify-content-center mt-3">
                         {otherBlogs.map(b=><OtherBlog blog={b}/>)}
                     </div>
                 </div>

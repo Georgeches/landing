@@ -6,17 +6,31 @@ import Blogs from './components/Blogs';
 import Questions from './components/Questions';
 import Services from './components/Services';
 import Footer from './components/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import BlogDetail from './components/BlogDetail';
+import blogs from './data';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Services />
-      <Blogs />
-      <Questions />
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={
+          <div className="App">
+            <Navbar />
+            <Hero />
+            <Services />
+            <Blogs />
+            <Questions />
+            <Footer/>
+          </div>
+        }>
+        </Route>
+
+        <Route path='/blog/:id' element={<BlogDetail blogs={blogs}/>} />
+      </Routes>
+    </BrowserRouter>
+        
   );
 }
 

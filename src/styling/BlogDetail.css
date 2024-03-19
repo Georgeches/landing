@@ -1,0 +1,8 @@
+@media only screen and (max-width: 993px){
+    .blog-section{
+        width: 100% !important;
+    }
+    .other-section{
+        width: 100% !important;
+    }
+}

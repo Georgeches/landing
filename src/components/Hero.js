@@ -7,7 +7,7 @@ export default function Hero(){
             <img src={hero_image} className="w-100" alt="hero"/>
             <div className='hero-texts'>
                 <p className='hero-texts-header'>Welcome to Our Website</p>
-                <p className='hero-texts-small'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id gravida metus.</p>
+                <p className='hero-texts-small'>Providing the right advice; powering your business.</p>
                 <button className='hero-texts-button'>Explore</button>
             </div>
         </div>

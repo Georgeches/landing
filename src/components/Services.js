@@ -1,9 +1,9 @@
 export default function Services(){
     const images = `${process.env.PUBLIC_URL}/images`
-    const sectionClass = window.screen.width < 1024?"container-fluid px-5 services-section":"container-fluid services-section"
+    const sectionClass = window.screen.width < 1024?"container-fluid px-0 services-section border":"container-fluid border p-0 services-section"
     return (
         <div className={sectionClass} style={{marginTop: "80px"}}>
-            <div className="mt-5 services-body">
+            <div className="mt-5 services-body border">
                 <div className="section-header col-12 col-lg-4">
                     <p style={{
                         fontSize: "20px",

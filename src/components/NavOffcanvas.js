@@ -7,7 +7,7 @@ export default function NavOffcanvas({logo}){
                 <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
-                <ul className="nav-list flex-column">
+                <ul className="nav-list mt-3 flex-column">
                     <li className='nav-item'>
                         <a className='nav-link' href='/'>Home</a>
                     </li>
@@ -22,6 +22,15 @@ export default function NavOffcanvas({logo}){
                     </li>
                     <li>
                         <a href='/contact' className='nav-link'>Contact</a>
+                    </li>
+                </ul>
+
+                <ul className="nav-bottom-list flex-column" style={{position: "absolute", bottom: "30px"}}>
+                    <li className='nav-item mb-3'>
+                        <a className='nav-link text-secondary' href='/'>Terms Of Service</a>
+                    </li>
+                    <li>
+                        <a href='/about' className='nav-link text-secondary'>Contact Us</a>
                     </li>
                 </ul>
             </div>

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Paragraph from "./Paragraph";
-import OtherBlog from "./OtherBlog";
 import '../styling/BlogDetail.css';
+import BlogOther from "./Recommended";
 
 export default function BlogDetail({blogs}){
 
@@ -24,7 +24,7 @@ export default function BlogDetail({blogs}){
                 <div className="px-3 px-md-0 w-25 other-section">
                     <h3>More blogs</h3>
                     <div className="d-flex flex-wrap justify-content-center mt-3">
-                        {otherBlogs.map(b=><OtherBlog blog={b}/>)}
+                        {otherBlogs.map(b=><BlogOther blog={b}/>)}
                     </div>
                 </div>
             </div>

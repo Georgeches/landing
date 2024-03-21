@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BlogDetail from './components/BlogDetail';
 import blogs from './data';
+import About from './components/About';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <div className="App">
             <Navbar />
             <Hero />
+            <About/>
             <Services />
             <Blogs />
             <Questions />

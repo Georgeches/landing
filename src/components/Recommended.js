@@ -1,4 +1,4 @@
-export default function OtherBlog({blog}){
+export default function BlogOther({blog}){
 
     const link = `/blog/${blog?.id}`;
     return(

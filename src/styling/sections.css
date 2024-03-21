@@ -59,10 +59,15 @@
 .section-header{
 }
 
+.service-wrap{
+    width: 30%;
+}
+
 .service-with-img{
     max-height: 450px;
-    width: 30%;
+    width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .service-with-img img{
@@ -75,10 +80,34 @@
     overflow: hidden;
 }
 
+.service-more{
+    font-size: 17px;
+    font-weight: 600;
+    height: 56px;
+    width: 100%;
+    background-color:#A47A00;
+    color: white;
+}
+
+.service-more:hover, .service-more:active{
+    background-color:#906c00 !important;
+    color: white !important;
+}
+
 .service-header{
     font-size: 20px;
     color: #A47A00;
     margin-bottom: 10px;
+}
+
+.about{
+    width: 30%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px 20px;
+}
+
+.about h2{
+    color: #A47A00;
 }
 
 input{
@@ -167,6 +196,10 @@ textarea{
 }
 
 @media only screen and (min-width: 769px){
+    .about-section{
+        position: relative;
+        top: 100px;
+    }
     .services-section{
         position: relative;
         top: 60px;
@@ -178,7 +211,7 @@ textarea{
 }
 
 @media only screen and (max-width: 1024px){
-    .service-with-img{
+    .service-wrap{
         width: 48.5%;
     }
     .section-header{
@@ -187,13 +220,32 @@ textarea{
     .blog{
         width: 49%;
     }
+    .about-section{
+        position: relative;
+        top: 100px;
+        padding: 0px;
+    }
+    .about{
+        width: 45%;
+    }
+    .about-last{
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 560px){
-    .service-with-img, .section-header{
+    .service-wrap, .section-header{
         width: 90%;
     }
     .blog{
         width: 90%;
+    }
+    .about-section{
+        position: relative;
+        top: 60px;
+        padding: 0px;
+    }
+    .about, .about-last{
+        width: 100%;
     }
 }

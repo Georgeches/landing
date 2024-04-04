@@ -3,7 +3,7 @@ import '../styling/sections.css'
 export default function Blogs(){
 
     return(
-        <div className="container mt-5 blogs-section">
+        <div className="container mt-5 blogs-section" id='blogs'>
             <div className="text-center">
                 <h2 className="fw-bold">Recent Blogs</h2>
                 <p>Get up-to-date information on bonds and insurances to make sure you make the right decision</p>

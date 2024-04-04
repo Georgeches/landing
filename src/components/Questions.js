@@ -10,7 +10,6 @@ export default function Questions(){
                 <p style={{
                     fontSize: "40px"
                 }} className="fw-bold">Questions</p>
-                <p className="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit</p>
             </div>
 
             <div className="accordion" id="accordionPanelsStayOpenExample">

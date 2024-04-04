@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-scroll';
 import '../styling/Navbar.css'
 import NavOffcanvas from './NavOffcanvas'
 
 export default function Navbar(){
 
+    const nav = useNavigate()
     const logo = process.env.PUBLIC_URL+'/images/logo.png'
     return (
         <>
@@ -18,13 +21,13 @@ export default function Navbar(){
                         <a className='nav-link' href='/'>Home</a>
                     </li>
                     <li>
-                        <a href='/#services-section' className='nav-link'>Services</a>
+                        <p style={{cursor:"pointer"}}><Link to="services" smooth={true} duration={300}>Services</Link></p>
                     </li>
                     <li>
-                        <a href='#blogs-section' className='nav-link'>Blogs</a>
+                        <p style={{cursor:"pointer"}}><Link to="blogs" smooth={true} duration={300}>Blogs</Link></p>
                     </li>
                     <li>
-                        <a href='/#footer-section' className='nav-link'>Contact</a>
+                        <p style={{cursor:"pointer"}}><Link to="footer" smooth={true} duration={300}>Contacts</Link></p>
                     </li>
                 </ul>
             </div>

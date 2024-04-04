@@ -2,10 +2,12 @@ import { useState } from "react"
 
 export default function Footer(){
 
-    const [name, setName] = useState()
-    const [email, setEmail] = useState()
-    const [message, setMessage] = useState()
-    const [resp, setResp] = useState({})
+    const mailApi = process.env.REACT_APP_MAIL_API
+
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
+    const [resp, setResp] = useState(0)
 
     const mail = {
         name: name,
@@ -17,7 +19,7 @@ export default function Footer(){
         e.preventDefault()
         
 
-        fetch('http://localhost:3001/sendemail', {
+        fetch(`${mailApi}/sendemail`, {
             method: 'POST',
             headers: {
                 'Content-Type':'application/json'
@@ -26,8 +28,20 @@ export default function Footer(){
         })
         .then(res=>res.json())
         .then(data=>{
-            setResp(data)
+            setResp({
+                message: data?.status===500?"Email not sent. Please try again later":"Email sent successfully",
+                status: data?.status
+            })
+            if(data?.status!==500){
+                setName("")
+                setEmail("")
+                setMessage("")
+            }
         })
+    }
+
+    const pStyle = {
+        fontSize: "18px"
     }
 
     return(
@@ -35,14 +49,14 @@ export default function Footer(){
             <div className="footer1">
                 <form className="d-flex flex-column" onSubmit={e=>sendMail(e)}>
                     <h4 className="mb-3">Send us a mail</h4>
-                    <input className="mb-1" type="text" onChange={e=>setName(e.target.value)} placeholder="Your name"/>
-                    <input className="mb-1" type="email" onChange={e=>setEmail(e.target.value)} placeholder="Your email address"/>
-                    <textarea placeholder="Enter message" onChange={e=>setMessage(e.target.value)} rows="7"></textarea>
+                    <input className="mb-1" type="text" onChange={e=>setName(e.target.value)} value={name} placeholder="Your name"/>
+                    <input className="mb-1" type="email" onChange={e=>setEmail(e.target.value)} value={email} placeholder="Your email address"/>
+                    <textarea placeholder="Enter message" onChange={e=>setMessage(e.target.value)} value={message} rows="7"></textarea>
                     <button type="submit" className="send-mail">Send message</button>
 
-                    {resp?.error&&(<p className="text-danger">{resp}</p>)}
+                    {resp?.status===500&&(<p className="text-danger">{resp?.message}!</p>)}
 
-                    {resp?.info&&(<p className="text-success">{resp}</p>)}
+                    {resp?.status===200&&(<p className="text-success my-3 lead fw-normal" style={pStyle}>{resp?.message}!</p>)}
                 </form>
             
                 <ul className="links d-flex align-items-center gap-3 p-0 mt-3">

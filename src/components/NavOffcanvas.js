@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 export default function NavOffcanvas({logo}){
 
     return(
@@ -12,16 +14,16 @@ export default function NavOffcanvas({logo}){
                         <a className='nav-link' href='/'>Home</a>
                     </li>
                     <li>
-                        <a href='/about' className='nav-link'>About</a>
+                        <p style={{cursor:"pointer"}}><Link to="about" smooth={true} duration={300}>About</Link></p>
                     </li>
                     <li>
-                        <a href='/services' className='nav-link'>Services</a>
+                        <p style={{cursor:"pointer"}}><Link to="services" smooth={true} duration={300}>Services</Link></p>
                     </li>
                     <li>
-                        <a href='/blogs' className='nav-link'>Blogs</a>
+                        <p style={{cursor:"pointer"}}><Link to="blogs" smooth={true} duration={300}>Blogs</Link></p>
                     </li>
                     <li>
-                        <a href='/contact' className='nav-link'>Contact</a>
+                        <p style={{cursor:"pointer"}}><Link to="footer" smooth={true} duration={300}>Contacts</Link></p>
                     </li>
                 </ul>
 

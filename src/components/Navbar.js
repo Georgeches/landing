@@ -21,6 +21,9 @@ export default function Navbar(){
                         <a className='nav-link' href='/'>Home</a>
                     </li>
                     <li>
+                        <p style={{cursor:"pointer"}}><Link to="about" smooth={true} duration={300}>About</Link></p>
+                    </li>
+                    <li>
                         <p style={{cursor:"pointer"}}><Link to="services" smooth={true} duration={300}>Services</Link></p>
                     </li>
                     <li>

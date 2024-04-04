@@ -1,7 +1,7 @@
 export default function About(){
 
     return(
-        <div className="container p-0 about-section">
+        <div className="container p-0 about-section" id="about">
 
             <div className="d-flex p-3 flex-wrap justify-content-center mt-4 gap-2">
                 <div className="about">

@@ -1,7 +1,7 @@
 export default function About(){
 
     return(
-        <div className="container p-0 about-section" id="about">
+        <div className="container p-0 about-section">
 
             <div className="d-flex p-3 flex-wrap justify-content-center mt-4 gap-2">
                 <div className="about">
@@ -18,6 +18,9 @@ export default function About(){
                     <h2>Vision Statement</h2>
                     <p className="text-secondary">We endeavor to empower our clients to prosper in their trade finance and insurance needs and obligations. Our community and person-centered culture integrated with commitment to excellent service and innovative connectivity will expand our relationships for generations to come.</p>
                 </div>
+            </div>
+            <div id='services' style={{position: 'absolute', bottom: 100}}>
+
             </div>
         </div>
     )

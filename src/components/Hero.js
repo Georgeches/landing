@@ -10,6 +10,9 @@ export default function Hero(){
                 <p className='hero-texts-small'>Providing the right advice; powering your business.</p>
                 <button className='hero-texts-button'>Explore</button>
             </div>
+            <div className='hero-bottom' id="about" style={{position: "absolute", bottom: 100}}>
+
+            </div>
         </div>
     )
 }

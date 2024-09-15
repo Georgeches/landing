@@ -63,7 +63,7 @@ export default function Services(){
     const images = `${process.env.PUBLIC_URL}/images`
     const sectionClass = window.screen.width < 1024?"container-fluid px-0 services-section":"container-fluid p-0 services-section"
     return (
-        <div className={sectionClass} id="services" style={{marginTop: "80px"}}>
+        <div className={sectionClass} style={{marginTop: "80px"}}>
             <div className="mt-5 services-body">
                 <div className="section-header ps-2 ps-lg-5 col-12 col-lg-12">
                     <p style={{
@@ -83,12 +83,13 @@ export default function Services(){
                     </ul>
                     <button className="btn mt-2 text-white" style={{background: "#b58800"}}>Get Quotations</button>
                 </div>
-                {services.map(service=>
+                {services.map(service =>
                     <div className="service-wrap" key={service?.display}>
                         <div className="service-with-img" key={service?.display}>
-                            <img src={images+service?.image} className="w-100" alt=""/>
+                            <img src={images + service?.image} className="w-100" alt=""/>
                         </div>
-                        <button className="btn service-more" onClick={e=>setService(service)} data-bs-toggle="modal" data-bs-target="#serviceModal">About {service?.display}</button>
+                        <button className="btn service-more" onClick={e => setService(service)} data-bs-toggle="modal"
+                                data-bs-target="#serviceModal">About {service?.display}</button>
                     </div>
                 )}
                 <ServiceModal service={service}/>

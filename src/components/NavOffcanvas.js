@@ -14,16 +14,16 @@ export default function NavOffcanvas({logo}){
                         <a className='nav-link' href='/'>Home</a>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}}><Link to="about" smooth={true} duration={300}>About</Link></p>
+                        <p style={{cursor:"pointer"}} data-bs-dismiss="offcanvas"><Link to="about" smooth={true} duration={300}>About</Link></p>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}}><Link to="services" smooth={true} duration={300}>Services</Link></p>
+                        <p style={{cursor:"pointer"}} data-bs-dismiss="offcanvas"><Link to="services" smooth={true} duration={300}>Services</Link></p>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}}><Link to="blogs" smooth={true} duration={300}>Blogs</Link></p>
+                        <p style={{cursor:"pointer"}} data-bs-dismiss="offcanvas"><Link to="blogs" smooth={true} duration={300}>Blogs</Link></p>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}}><Link to="footer" smooth={true} duration={300}>Contacts</Link></p>
+                        <p style={{cursor:"pointer"}} data-bs-dismiss="offcanvas"><Link to="footer" smooth={true} duration={300}>Contacts</Link></p>
                     </li>
                 </ul>
 

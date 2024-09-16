@@ -21,14 +21,14 @@ app.post('/sendemail', (req, res)=>{
         service: 'gmail',
         auth: {
           user: process.env.MAIL_FROM,
-          pass: process.env.MAIL_PASSWORD 
+          pass: process.env.MAIL_PASSWORD
         }
     });
     
     var mailOptions = {
         from: process.env.MAIL_FROM,
         to: process.env.MAIL_TO,
-        subject: `Message from ${name}, ${email}`,
+        subject: `Timvest error sending email`,
         text: text
     };
     

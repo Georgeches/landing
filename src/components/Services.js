@@ -60,10 +60,10 @@ export default function Services(){
 
     const [service, setService] = useState({})
 
-    const images = `${process.env.PUBLIC_URL}/images`
+    const images = '/images'
     const sectionClass = window.screen.width < 1024?"container-fluid px-0 services-section":"container-fluid p-0 services-section"
     return (
-        <div className={sectionClass} style={{marginTop: "80px"}}>
+        <div className={sectionClass} style={{marginTop: "80px", position:'relative'}}>
             <div className="mt-5 services-body">
                 <div className="section-header ps-2 ps-lg-5 col-12 col-lg-12">
                     <p style={{
@@ -93,6 +93,10 @@ export default function Services(){
                     </div>
                 )}
                 <ServiceModal service={service}/>
+            </div>
+
+            <div id="blogs" style={{position: "absolute", bottom: 100}}>
+
             </div>
         </div>
     )

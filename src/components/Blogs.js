@@ -3,13 +3,13 @@ import '../styling/sections.css'
 export default function Blogs(){
 
     return(
-        <div className="container mt-5 blogs-section">
+        <div className="container mt-5 blogs-section" style={{position: 'relative'}}>
             <div className="text-center">
                 <h2 className="fw-bold">Recent Blogs</h2>
                 <p>Get up-to-date information on bonds and insurances to make sure you make the right decision</p>
             </div>
 
-            <div className="blogs d-flex justify-content-center align-items-center gap-2 flex-wrap mt-4">
+            <div className="d-flex justify-content-center align-items-center gap-2 flex-wrap mt-4">
                 <div className="blog">
                     <div className="blog-image">
                         <a href='/blog/1'><img
@@ -90,6 +90,10 @@ export default function Blogs(){
                         <p className='text-secondary mt-3'>3 days ago</p>
                     </div>
                 </div>
+            </div>
+
+            <div id="faqs" style={{position: "absolute", bottom: 100}}>
+
             </div>
         </div>
     )

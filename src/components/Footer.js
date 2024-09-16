@@ -1,5 +1,6 @@
 import { useState } from "react"
 import emailjs from '@emailjs/browser';
+import {Link} from "react-scroll";
 
 export default function Footer(){
 
@@ -7,8 +8,6 @@ export default function Footer(){
     const serviceID = process.env.REACT_APP_SERVICE_ID
     const templateID = process.env.REACT_APP_TEMPLATE_ID
     const publicKey = process.env.REACT_APP_EMAIL_PUBLIC_KEY
-
-    console.log(process.env.REACT_APP_EMAIL_PUBLIC_KEY)
 
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -28,9 +27,26 @@ export default function Footer(){
 
         emailjs.send(serviceID, templateID, templateParams, publicKey)
             .then(response=> {
-                console.log(response)
+                if(response.status === 200){
+                    alert('Your email has been sent successfully. Thank you for reaching out to us!')
+                } else {
+                    alert('There was an error sending your email. Please try again later!')
+                }
             })
-            .catch(err=>console.error(err))
+            .catch(err=>{
+                fetch(`${mailApi}/sendemail`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type':'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        text: JSON.stringify(err)
+                    })
+                })
+                    .then(res=>res.json())
+            })
 
         // fetch(`${mailApi}/sendemail`, {
         //     method: 'POST',
@@ -63,11 +79,11 @@ export default function Footer(){
                 <form className="d-flex flex-column" onSubmit={e => sendMail(e)}>
                     <h4 className="mb-3">Send us a mail</h4>
                     <input className="mb-1" type="text" onChange={e => setName(e.target.value)} value={name}
-                           placeholder="Your name"/>
+                           placeholder="Your name" required/>
                     <input className="mb-1" type="email" onChange={e => setEmail(e.target.value)} value={email}
-                           placeholder="Your email address"/>
+                           placeholder="Your email address" required/>
                     <textarea placeholder="Enter message" onChange={e => setMessage(e.target.value)} value={message}
-                              rows="7"></textarea>
+                              rows="7" required></textarea>
                     <button type="submit" className="send-mail">Send message</button>
 
                     {resp?.status === 500 && (<p className="text-danger">{resp?.message}!</p>)}
@@ -78,11 +94,11 @@ export default function Footer(){
 
                 <ul className="links d-flex align-items-center gap-3 p-0 mt-3">
                     <li className="link whatsapp">
-                        <a href="tel:0713928513"><i className="bi bi-telephone whatsapp"></i></a>
+                        <a target='_blank' href="tel:0713928513"><i className="bi bi-telephone whatsapp"></i></a>
                     </li>
 
                     <li className="link whatsapp">
-                        <a href="#"><i className="bi bi-whatsapp whatsapp"></i></a>
+                        <a target='_blank' href="https://wa.me/+254713928513"><i className="bi bi-whatsapp whatsapp"></i></a>
                     </li>
                 </ul>
             </div>
@@ -90,10 +106,11 @@ export default function Footer(){
             <div className="d-flex flex-wrap gap-5">
                 <div className="footer-category">
                     <h5 className="mb-3">Useful links</h5>
-                    <p>Home</p>
-                    <p>About us</p>
-                    <p>Services</p>
-                    <p>Blogs</p>
+                    <a href='#' className='text-secondary'><p>Home</p></a>
+                    <p style={{cursor: "pointer"}}><Link to="about" smooth={true} duration={300}>About us</Link></p>
+                    <p style={{cursor: "pointer"}}><Link to="services" smooth={true} duration={300}>Services</Link></p>
+                    <p style={{cursor: "pointer"}}><Link to="blogs" smooth={true} duration={300}>Blogs</Link></p>
+                    <p style={{cursor: "pointer"}}><Link to="faqs" smooth={true} duration={300}>FAQs</Link></p>
                 </div>
 
                 <div className="footer-category">
@@ -109,7 +126,7 @@ export default function Footer(){
                 <div className="footer-category">
 
                     <p className="text-dark"><strong>Phone:</strong> 0713928513</p>
-                    <p className="text-dark"><strong>Email:</strong> example@gmail.com</p>
+                    <p className="text-dark"><strong>Email:</strong> timvestc@timvest.co.ke</p>
                 </div>
             </div>
         </div>

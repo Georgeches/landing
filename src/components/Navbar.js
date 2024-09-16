@@ -6,7 +6,7 @@ import NavOffcanvas from './NavOffcanvas'
 export default function Navbar(){
 
     const nav = useNavigate()
-    const logo = process.env.PUBLIC_URL+'/images/logo.png'
+    const logo = '/images/logo.png'
     return (
         <>
         {/* >=tablets */}
@@ -21,24 +21,29 @@ export default function Navbar(){
                         <a className='nav-link' href='/'>Home</a>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}}><Link to="about" smooth={true} duration={300}>About</Link></p>
+                        <p style={{cursor: "pointer"}}><Link to="about" smooth={true} duration={300}>About</Link></p>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}}><Link to="services" smooth={true} duration={300}>Services</Link></p>
+                        <p style={{cursor: "pointer"}}><Link to="services" smooth={true} duration={300}>Services</Link>
+                        </p>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}}><Link to="blogs" smooth={true} duration={300}>Blogs</Link></p>
+                        <p style={{cursor: "pointer"}}><Link to="blogs" smooth={true} duration={300}>Blogs</Link></p>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}}><Link to="footer" smooth={true} duration={300}>Contacts</Link></p>
+                        <p style={{cursor: "pointer"}}><Link to="faqs" smooth={true} duration={300}>FAQs</Link></p>
+                    </li>
+                    <li>
+                        <p style={{cursor: "pointer"}}><Link to="footer" smooth={true} duration={300}>Contacts</Link>
+                        </p>
                     </li>
                 </ul>
             </div>
         </div>
 
-        {/* smaller than tablets */}
-        <div className="navbar navbar-small d-md-none">
-            <div className="navbar-brand">
+            {/* smaller than tablets */}
+            <div className="navbar navbar-small d-md-none">
+                <div className="navbar-brand">
                 <a href='/'><img height="100" src={logo} alt='logo'/></a>
             </div>
 

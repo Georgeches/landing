@@ -14,22 +14,32 @@ export default function NavOffcanvas({logo}){
                         <a className='nav-link' href='/'>Home</a>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}} data-bs-dismiss="offcanvas"><Link to="about" smooth={true} duration={300}>About</Link></p>
+                        <p style={{cursor: "pointer"}} data-bs-dismiss="offcanvas"><Link to="about" smooth={true}
+                                                                                         duration={300}>About</Link></p>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}} data-bs-dismiss="offcanvas"><Link to="services" smooth={true} duration={300}>Services</Link></p>
+                        <p style={{cursor: "pointer"}} data-bs-dismiss="offcanvas"><Link to="services" smooth={true}
+                                                                                         duration={300}>Services</Link>
+                        </p>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}} data-bs-dismiss="offcanvas"><Link to="blogs" smooth={true} duration={300}>Blogs</Link></p>
+                        <p style={{cursor: "pointer"}} data-bs-dismiss="offcanvas"><Link to="blogs" smooth={true}
+                                                                                         duration={300}>Blogs</Link></p>
                     </li>
                     <li>
-                        <p style={{cursor:"pointer"}} data-bs-dismiss="offcanvas"><Link to="footer" smooth={true} duration={300}>Contacts</Link></p>
+                        <p style={{cursor: "pointer"}} data-bs-dismiss="offcanvas"><Link to="faqs" smooth={true}
+                                                                                         duration={300}>FAQs</Link></p>
+                    </li>
+                    <li>
+                        <p style={{cursor: "pointer"}} data-bs-dismiss="offcanvas"><Link to="footer" smooth={true}
+                                                                                         duration={300}>Contacts</Link>
+                        </p>
                     </li>
                 </ul>
 
                 <ul className="nav-bottom-list flex-column" style={{position: "absolute", bottom: "30px"}}>
                     <li className='nav-item mb-3'>
-                        <a className='nav-link text-secondary' href='/'>Terms Of Service</a>
+                    <a className='nav-link text-secondary' href='/'>Terms Of Service</a>
                     </li>
                     <li>
                         <a href='/about' className='nav-link text-secondary'>Contact Us</a>

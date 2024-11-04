@@ -38,11 +38,9 @@ export default function NavOffcanvas({logo}){
                 </ul>
 
                 <ul className="nav-bottom-list flex-column" style={{position: "absolute", bottom: "30px"}}>
-                    <li className='nav-item mb-3'>
-                    <a className='nav-link text-secondary' href='/'>Terms Of Service</a>
-                    </li>
                     <li>
-                        <a href='/about' className='nav-link text-secondary'>Contact Us</a>
+                        <Link to="footer" smooth={true} data-bs-dismiss="offcanvas"
+                              duration={300} className='nav-link text-secondary'>Contact Us</Link>
                     </li>
                 </ul>
             </div>

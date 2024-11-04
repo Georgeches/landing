@@ -24,29 +24,14 @@ export default function Footer(){
 
     function sendMail(e){
         e.preventDefault()
-
-        emailjs.send(serviceID, templateID, templateParams, publicKey)
-            .then(response=> {
-                if(response.status === 200){
-                    alert('Your email has been sent successfully. Thank you for reaching out to us!')
-                } else {
-                    alert('There was an error sending your email. Please try again later!')
-                }
-            })
-            .catch(err=>{
-                fetch(`${mailApi}/sendemail`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type':'application/json'
-                    },
-                    body: JSON.stringify({
-                        name: name,
-                        email: email,
-                        text: JSON.stringify(err)
-                    })
-                })
-                    .then(res=>res.json())
-            })
+        emailjs.send(serviceID, templateID, templateParams, publicKey).then(
+            (response) => {
+                alert('Your email has been sent successfully. Thank you for reaching out to us!')
+            },
+            (error) => {
+                alert('There was an error sending your email. Please try again later.')
+            },
+        )
 
         // fetch(`${mailApi}/sendemail`, {
         //     method: 'POST',
@@ -126,7 +111,7 @@ export default function Footer(){
                 <div className="footer-category">
 
                     <p className="text-dark"><strong>Phone:</strong> 0713928513</p>
-                    <p className="text-dark"><strong>Email:</strong> timvestc@timvest.co.ke</p>
+                    <p className="text-dark"><strong>Email:</strong> info@timvest.co.ke</p>
                 </div>
             </div>
         </div>
